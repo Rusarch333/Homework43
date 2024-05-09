@@ -28,7 +28,7 @@ class Figeure3D {
     }
     this._name = value;
   }
-  
+
   getValume() {
     throw new Error("Can't call getValume() method from Figeure3D abstract class!");
   }
