@@ -9,7 +9,7 @@
 /**
  * Функція, яка приймає будь-яку 3D фігуру і повертає її об'єм
  * @param {*} figure
- * @throws {TypeError} if param not a instance of Figure3D
+ * @throws {TypeError} Param of getVolume3DFigure method is not a instance of Figure3D!
  * @returns {number}
  */
 const getVolume3DFigure = (figure) => {
