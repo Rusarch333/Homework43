@@ -22,16 +22,15 @@ const getVolume3DFigure = (figure) => {
 };
 
 try {
-  // const figure3D = new Figure3D(); // Name of Figure3D is not a string ERROR!
+  const figure3D = new Figure3D(); // Error - You can`t create instance of abstract class Figure3D!
   const sphere = new Sphere(10);
   const cube = new Cube(5);
   const cylinder = new Cylinder(10, 15);
 
-  // console.log(getVolume3DFigure("figure3D"));
-  // console.log(getVolume3DFigure(figure3D));
-  // console.log(getVolume3DFigure(sphere));
-  // console.log(getVolume3DFigure(cube));
-  // console.log(getVolume3DFigure(cylinder));
+  // console.log(getVolume3DFigure("figure3D")); // TypeError - Param of getVolume3DFigure method is not a instance of Figure3D!
+  console.log(getVolume3DFigure(sphere));
+  console.log(getVolume3DFigure(cube));
+  console.log(getVolume3DFigure(cylinder));
 } catch (error) {
   console.error(error);
 }

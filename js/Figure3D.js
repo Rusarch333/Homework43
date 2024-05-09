@@ -16,10 +16,15 @@ class Figure3D {
   /**
    * Конструктор класу Figure3D
    * @param {string} name
-   * @throws {TypeError} Name of Figure3D is not a string
+   * @throws {Error} You can`t create instance of abstract class Figure3D!
+   * @throws {TypeError} Name of Figure3D is not a string!
    * @throws {Error} Name of Figure3D can't be empty!
    */
   constructor(name) {
+    if (this.constructor === Figure3D) {
+      throw new Error('You can`t create instance of abstract class Figure3D!');
+    }
+
     if (typeof name !== "string") {
       throw new TypeError("Name of Figure3D is not a string!");
     }
