@@ -35,7 +35,6 @@ class Sphere extends Figure3D {
    * @returns {number}
    */
   getValume() {
-    // ???????????????????? 4/3
-    return 1.33333333333 * Math.PI * Math.pow(radius, 3);
+    return (4/3) * Math.PI * Math.pow(radius, 3);
   }
 }
