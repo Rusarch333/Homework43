@@ -27,10 +27,13 @@ try {
   const cube = new Cube(5);
   const cylinder = new Cylinder(10, 15);
 
+  // cylinder.radius = "5"; // index.js:38 TypeError: Radius of Cylinder class instance is not a number!
+  // cylinder.height = -5;  // Error: Height of Cylinder class instance must be more then 0!
+
   // console.log(getVolume3DFigure("figure3D")); // TypeError - Param of getVolume3DFigure method is not a instance of Figure3D!
-  console.log(getVolume3DFigure(sphere));
-  console.log(getVolume3DFigure(cube));
-  console.log(getVolume3DFigure(cylinder));
+  console.log((getVolume3DFigure(sphere).toFixed(2)));  // 4188.79
+  console.log(getVolume3DFigure(cube).toFixed(2));      // 125.00
+  console.log(getVolume3DFigure(cylinder).toFixed(2));  // 4712.39
 } catch (error) {
   console.error(error);
 }
