@@ -22,12 +22,12 @@ const getVolume3DFigure = (figure) => {
 };
 
 try {
-  // const figure3D = new Figure3D(); // Error - You can`t create instance of abstract class Figure3D!
+  // const figure3D = new Figure3D(); // Error: You can`t create instance of abstract class Figure3D!
   const sphere = new Sphere(10);
   const cube = new Cube(5);
   const cylinder = new Cylinder(10, 15);
 
-  // cylinder.radius = "5"; // index.js:38 TypeError: Radius of Cylinder class instance is not a number!
+  // cylinder.radius = "5"; // TypeError: Radius of Cylinder class instance is not a number!
   // cylinder.height = -5;  // Error: Height of Cylinder class instance must be more then 0!
 
   // console.log(getVolume3DFigure("figure3D")); // TypeError - Param of getVolume3DFigure method is not a instance of Figure3D!
