@@ -39,6 +39,10 @@ class Figure3D {
     return this._name;
   }
 
+  /**
+   * Абстрактний метод який при виклику повертає помилку:
+   * @throws {Error} Can't call getValume() method becouse Figeure3D is abstract class!
+   */
   getVolume() {
     throw new Error(
       "Can't call getValume() method becouse Figeure3D is abstract class!"
