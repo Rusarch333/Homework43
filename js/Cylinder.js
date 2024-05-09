@@ -21,10 +21,10 @@ class Cylinder extends Sphere {
   }
   set height(value) {
     // ?????????????????????? ЗАВДАВАТИ ВСЕ ТАКИ СЕТ ????
-    if (typeof height !== 'number') {
+    if (typeof value !== 'number') {
       throw new TypeError("Height is not a number!");
     }
-    if (height <= 0) {
+    if (value <= 0) {
       // ???????????????????????????
       throw new Error("Height must be more then 0!");
     }
@@ -36,6 +36,6 @@ class Cylinder extends Sphere {
    * @returns {number}
    */
   getValume() {
-    return Math.PI * Math.pow(radius, 2) * height;
+    return Math.PI * Math.pow(this._radius, 2) * this._height;
   }
 }

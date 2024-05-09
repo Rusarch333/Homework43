@@ -20,10 +20,10 @@ class Cube extends Figure3D {
   }
   set side(value) {
     // ?????????????????????? ЗАВДАВАТИ ВСЕ ТАКИ СЕТ ????
-    if (typeof side !== 'number') {
+    if (typeof value !== 'number') {
       throw new TypeError("Side is not a number!");
     }
-    if (side <= 0) {
+    if (value <= 0) {
       // ???????????????????????????
       throw new Error("Side must be more then 0!");
     }
@@ -35,6 +35,6 @@ class Cube extends Figure3D {
    * @returns {number}
    */
   getValume() {
-    return Math.pow(side, 3);
+    return Math.pow(this._side, 3);
   }
 }

@@ -9,12 +9,12 @@ const getVolume3DFigure= (figure) => {
 };
 
 try{
-  const figure3D = new Figure3D();
-  const sphere = new Sphere();
-  const cube = new Cube();
-  const cylinder = new Cylinder();
+  const figure3D = new Figure3D("Figure3D");
+  const sphere = new Sphere("Sphere", 10);
+  const cube = new Cube("Cube", 5);
+  const cylinder = new Cylinder("Cylinder", 10, 15);
 
-  console.log(getVolume3DFigure(figure3D));
+  // console.log(getVolume3DFigure(figure3D));
   console.log(getVolume3DFigure(sphere));
   console.log(getVolume3DFigure(cube));
   console.log(getVolume3DFigure(cylinder));
