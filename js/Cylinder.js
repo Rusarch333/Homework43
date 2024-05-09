@@ -1,18 +1,19 @@
-"user strict";
+'user strict';
 
 /**
  * Клас який реалізує Циліндр
- * @extends Sphere
+ * @extends Figure3D
  */
-class Cylinder extends Sphere {
+class Cylinder extends Figure3D {
   /**
    * Конструктор класу Cylinder
-   * @param {string} name
    * @param {number} radius
    * @param {number} height
    */
-  constructor(name, radius, height) {
-    super(name, radius);
+  constructor(radius, height) {
+    super('Cylinder');
+
+    this.radius = radius;
     this.height = height;
   }
 
@@ -20,13 +21,11 @@ class Cylinder extends Sphere {
     return this._height;
   }
   set height(value) {
-    // ?????????????????????? ЗАВДАВАТИ ВСЕ ТАКИ СЕТ ????
-    if (typeof value !== "number") {
-      throw new TypeError("Height is not a number!");
+    if (typeof value !== 'number') {
+      throw new TypeError('Height of Cylinder is not a number!');
     }
     if (value <= 0) {
-      // ???????????????????????????
-      throw new Error("Height must be more then 0!");
+      throw new Error('Height of Cylinder must be more then 0!');
     }
     this._height = value;
   }

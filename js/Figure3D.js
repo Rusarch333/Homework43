@@ -1,4 +1,4 @@
-"user strict";
+'user strict';
 
 /**
  * Клас який реалізує 3D фігуру
@@ -9,37 +9,34 @@ class Figure3D {
    * @param {*} figure
    * @returns {boolean}
    */
-  static isFigure3D(figure) {
+  static isFigure3D (figure) {
     return figure instanceof Figure3D;
   }
 
   /**
    * Конструктор класу Figure3D
    * @param {string} name
+   * @throws {TypeError} Name of Figure3D is not a string
+   * @throws {Error} Name of Figure3D can't be empty!
    */
   constructor(name) {
-    // ????????????? _ ??????????
-    this.name = name;
+    if (typeof name !== 'string') {
+      throw new TypeError('Name of Figure3D is not a string!');
+    }
+    if (name === false) {
+      throw new Error('Name of Figure3D can\'t be empty!');
+    }
+
+    this._name = name;
   }
 
   get name() {
     return this._name;
   }
-  set name(value) {
-    // ?????????????????????? ЗАВДАВАТИ ВСЕ ТАКИ СЕТ ????
-    if (typeof value !== "string") {
-      throw new TypeError("Name is not a string!");
-    }
-    if (value === false) {
-      // ???????????????????????????
-      throw new Error("Name can't be empty!");
-    }
-    this._name = value;
-  }
 
   getVolume() {
     throw new Error(
-      "Can't call getValume() method becouse Figeure3D is abstract class!"
+      'Can\'t call getValume() method becouse Figeure3D is abstract class!'
     );
   }
 }

@@ -1,4 +1,4 @@
-"user strict";
+'user strict';
 
 /**
  * Клас який реалізує Куб
@@ -6,12 +6,12 @@
  */
 class Cube extends Figure3D {
   /**
-   * Конструктор класу Sphere
-   * @param {string} name
+   * Конструктор класу Cube
    * @param {number} side
    */
-  constructor(name, side) {
-    super(name);
+  constructor(side) {
+    super('Cube');
+
     this.side = side;
   }
 
@@ -19,13 +19,11 @@ class Cube extends Figure3D {
     return this._side;
   }
   set side(value) {
-    // ?????????????????????? ЗАВДАВАТИ ВСЕ ТАКИ СЕТ ????
-    if (typeof value !== "number") {
-      throw new TypeError("Side is not a number!");
+    if (typeof value !== 'number') {
+      throw new TypeError('Side of Cube is not a number!');
     }
     if (value <= 0) {
-      // ???????????????????????????
-      throw new Error("Side must be more then 0!");
+      throw new Error('Side of Cube must be more then 0!');
     }
     this._side = value;
   }

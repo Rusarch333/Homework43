@@ -1,4 +1,4 @@
-"user strict";
+'user strict';
 
 /*
   - Створити абстрактний клас Figeure3D з властивостю ім'я (string не пуста) і методом обчислити об'єм.
@@ -17,21 +17,21 @@ const getVolume3DFigure = (figure) => {
     return figure.getVolume();
   }
   throw new TypeError(
-    "Param of getVolume3DFigure method is not a instance of Figure3D!"
+    'Param of getVolume3DFigure method is not a instance of Figure3D!'
   );
 };
 
 try {
-  const figure3D = new Figure3D("Figure3D");
-  const sphere = new Sphere("Sphere", 10);
-  const cube = new Cube("Cube", 5);
-  const cylinder = new Cylinder("Cylinder", 10, 15);
+  // const figure3D = new Figure3D(); // Name of Figure3D is not a string ERROR!
+  const sphere = new Sphere(10);
+  const cube = new Cube(5);
+  const cylinder = new Cylinder(10, 15);
 
-  // console.log(getVolume3DFigure("figure3D"));
-  // console.log(getVolume3DFigure(figure3D));
-  console.log(getVolume3DFigure(sphere));
-  console.log(getVolume3DFigure(cube));
-  console.log(getVolume3DFigure(cylinder));
+  // console.log(getVolume3DFigure("figure3D")); 
+  // console.log(getVolume3DFigure(figure3D)); 
+  // console.log(getVolume3DFigure(sphere));
+  // console.log(getVolume3DFigure(cube));
+  // console.log(getVolume3DFigure(cylinder));
 } catch (error) {
   console.error(error);
 }
