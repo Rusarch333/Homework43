@@ -17,16 +17,31 @@ class Cylinder extends Figure3D {
     this.height = height;
   }
 
+  get radius() {
+    return this._radius;
+  }
+  set radius(value) {
+    if (typeof value !== "number") {
+      throw new TypeError("Radius of Cylinder class instance is not a number!");
+    }
+    if (value <= 0) {
+      throw new Error("Radius of Cylinder class instance must be more then 0!");
+    }
+    
+    this._radius = value;
+  }
+
   get height() {
     return this._height;
   }
   set height(value) {
     if (typeof value !== "number") {
-      throw new TypeError("Height of Cylinder  class instance is not a number!");
+      throw new TypeError("Height of Cylinder class instance is not a number!");
     }
     if (value <= 0) {
-      throw new Error("Height of Cylinder  class instance must be more then 0!");
+      throw new Error("Height of Cylinder class instance must be more then 0!");
     }
+    
     this._height = value;
   }
 
