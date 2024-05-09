@@ -6,6 +6,15 @@
  */
 class Figure3D {
   /**
+   * Функція, яка повідомляє, чи є параметр фігурою
+   * @param {*} figure 
+   * @returns {boolean}
+   */
+  static isFigure3D(figure) {
+    return figure instanceof Figure3D;
+  }
+
+  /**
    * Конструктор класу Figure3D
    * @param {string} name 
    */
@@ -28,7 +37,7 @@ class Figure3D {
     }
     this._name = value;
   }
-
+  
   getValume() {
     throw new Error("Can't call getValume() method from Figeure3D abstract class!");
   }
