@@ -1,4 +1,4 @@
-'user strict';
+"user strict";
 
 /**
  * Клас який реалізує Циліндр
@@ -11,7 +11,7 @@ class Cylinder extends Figure3D {
    * @param {number} height
    */
   constructor(radius, height) {
-    super('Cylinder');
+    super("Cylinder");
 
     this.radius = radius;
     this.height = height;
@@ -21,11 +21,11 @@ class Cylinder extends Figure3D {
     return this._height;
   }
   set height(value) {
-    if (typeof value !== 'number') {
-      throw new TypeError('Height of Cylinder is not a number!');
+    if (typeof value !== "number") {
+      throw new TypeError("Height of Cylinder is not a number!");
     }
     if (value <= 0) {
-      throw new Error('Height of Cylinder must be more then 0!');
+      throw new Error("Height of Cylinder must be more then 0!");
     }
     this._height = value;
   }

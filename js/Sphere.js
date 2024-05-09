@@ -1,4 +1,4 @@
-'user strict';
+"user strict";
 
 /**
  * Клас який реалізує Сферу
@@ -10,7 +10,7 @@ class Sphere extends Figure3D {
    * @param {number} radius
    */
   constructor(radius) {
-    super('Sphere');
+    super("Sphere");
 
     this.radius = radius;
   }
@@ -19,11 +19,11 @@ class Sphere extends Figure3D {
     return this._radius;
   }
   set radius(value) {
-    if (typeof value !== 'number') {
-      throw new TypeError('Radius of Sphere is not a number!');
+    if (typeof value !== "number") {
+      throw new TypeError("Radius of Sphere is not a number!");
     }
     if (value <= 0) {
-      throw new Error('Radius of Sphere must be more then 0!');
+      throw new Error("Radius of Sphere must be more then 0!");
     }
     this._radius = value;
   }
