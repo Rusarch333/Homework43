@@ -36,7 +36,7 @@ class Figure3D {
 
   getVolume() {
     throw new Error(
-      "Can't call getValume() method from Figeure3D abstract class!"
+      "Can't call getValume() method becouse Figeure3D is abstract class!"
     );
   }
 }

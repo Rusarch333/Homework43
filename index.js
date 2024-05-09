@@ -27,6 +27,7 @@ try {
   const cube = new Cube("Cube", 5);
   const cylinder = new Cylinder("Cylinder", 10, 15);
 
+  // console.log(getVolume3DFigure("figure3D"));
   // console.log(getVolume3DFigure(figure3D));
   console.log(getVolume3DFigure(sphere));
   console.log(getVolume3DFigure(cube));
