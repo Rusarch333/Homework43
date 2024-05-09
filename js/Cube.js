@@ -23,8 +23,9 @@ class Cube extends Figure3D {
       throw new TypeError("Side of Cube class instance is not a number!");
     }
     if (value <= 0) {
-      throw new Error("Side of Cube  class instance instance must be more then 0!");
+      throw new Error("Side of Cube class instance must be more then 0!");
     }
+
     this._side = value;
   }
 
