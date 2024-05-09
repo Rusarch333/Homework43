@@ -34,7 +34,7 @@ class Sphere extends Figure3D {
    * Функція, яка повертає об'єм сфери
    * @returns {number}
    */
-  getValume() {
+  getVolume() {
     return (4 / 3) * Math.PI * Math.pow(this._radius, 3);
   }
 }

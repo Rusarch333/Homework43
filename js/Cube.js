@@ -34,7 +34,7 @@ class Cube extends Figure3D {
    * Функція, яка повертає об'єм кубу
    * @returns {number}
    */
-  getValume() {
+  getVolume() {
     return Math.pow(this._side, 3);
   }
 }

@@ -34,7 +34,7 @@ class Figure3D {
     this._name = value;
   }
 
-  getValume() {
+  getVolume() {
     throw new Error(
       "Can't call getValume() method from Figeure3D abstract class!"
     );

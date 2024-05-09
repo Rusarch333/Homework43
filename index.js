@@ -14,7 +14,7 @@
  */
 const getVolume3DFigure = (figure) => {
   if (Figure3D.isFigure3D(figure)) {
-    return figure.getValume();
+    return figure.getVolume();
   }
   throw new TypeError(
     "Param of getVolume3DFigure method is not a instance of Figure3D!"

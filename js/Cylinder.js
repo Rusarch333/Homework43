@@ -35,7 +35,7 @@ class Cylinder extends Sphere {
    * Функція, яка повертає об'єм циліндру
    * @returns {number}
    */
-  getValume() {
+  getVolume() {
     return Math.PI * Math.pow(this._radius, 2) * this._height;
   }
 }
