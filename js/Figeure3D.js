@@ -5,8 +5,13 @@
  * Клас, який реалізує 3D фігуру
  */
 class Figeure3D {
+  /**
+   * Конструктор класу Figeure3D
+   * @param {string} name 
+   */
   constructor (name) {
-    this._name = name;
+    // ????????????? _ ??????????
+    this.name = name;
   }
 
   get name() {
@@ -23,7 +28,8 @@ class Figeure3D {
     }
     this._name = value;
   }
+  
   getValume() {
-    throw Error("Can't call getValume() method from Figeure3D abstract class!");
+    throw new Error("Can't call getValume() method from Figeure3D abstract class!");
   }
 }
