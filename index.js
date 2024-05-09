@@ -22,7 +22,7 @@ const getVolume3DFigure = (figure) => {
 };
 
 try {
-  const figure3D = new Figure3D(); // Error - You can`t create instance of abstract class Figure3D!
+  // const figure3D = new Figure3D(); // Error - You can`t create instance of abstract class Figure3D!
   const sphere = new Sphere(10);
   const cube = new Cube(5);
   const cylinder = new Cylinder(10, 15);
