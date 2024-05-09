@@ -4,9 +4,9 @@
 /**
  * Клас, який реалізує 3D фігуру
  */
-class Figeure3D {
+class Figure3D {
   /**
-   * Конструктор класу Figeure3D
+   * Конструктор класу Figure3D
    * @param {string} name 
    */
   constructor (name) {

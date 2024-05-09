@@ -2,9 +2,9 @@
 
 /**
  * Клас який реалізує Куб
- * @extends Figeure3D
+ * @extends Figure3D
  */
-class Cube extends Figeure3D {
+class Cube extends Figure3D {
   /**
    * Конструктор класу Sphere
    * @param {string} name
