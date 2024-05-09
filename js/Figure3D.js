@@ -22,18 +22,10 @@ class Figure3D {
    */
   constructor(name) {
     if (this.constructor === Figure3D) {
-      throw new Error('You can`t create instance of abstract class Figure3D!');
+      throw new Error("You can`t create instance of abstract class Figure3D!");
     }
-
     name = name.trim(); // Позбавляємось зайвих пробілів та рядків типу " ", "  "
-
-    if (typeof name !== "string") {
-      throw new TypeError("Name of Figure3D class instance is not a string!");
-    }
-    if (Boolean(name) === false) {
-      throw new Error("Name of Figure3D class instance can't be empty!");
-    }
-
+    validateStringField("Name", name);
     this._name = name;
   }
 

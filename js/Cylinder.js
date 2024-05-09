@@ -21,13 +21,7 @@ class Cylinder extends Figure3D {
     return this._radius;
   }
   set radius(value) {
-    if (typeof value !== "number") {
-      throw new TypeError("Radius of Cylinder class instance is not a number!");
-    }
-    if (value <= 0) {
-      throw new Error("Radius of Cylinder class instance must be more then 0!");
-    }
-    
+    validatePositiveNumberField("Radius", value);
     this._radius = value;
   }
 
@@ -35,13 +29,7 @@ class Cylinder extends Figure3D {
     return this._height;
   }
   set height(value) {
-    if (typeof value !== "number") {
-      throw new TypeError("Height of Cylinder class instance is not a number!");
-    }
-    if (value <= 0) {
-      throw new Error("Height of Cylinder class instance must be more then 0!");
-    }
-    
+    validatePositiveNumberField("Height", value);
     this._height = value;
   }
 
