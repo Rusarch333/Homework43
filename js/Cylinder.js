@@ -1,4 +1,4 @@
-'user strict';
+"user strict";
 
 /**
  * Клас який реалізує Циліндр
@@ -11,7 +11,7 @@ class Cylinder extends Sphere {
    * @param {number} radius
    * @param {number} height
    */
-  constructor (name, radius, height) {
+  constructor(name, radius, height) {
     super(name, radius);
     this.height = height;
   }
@@ -21,7 +21,7 @@ class Cylinder extends Sphere {
   }
   set height(value) {
     // ?????????????????????? ЗАВДАВАТИ ВСЕ ТАКИ СЕТ ????
-    if (typeof value !== 'number') {
+    if (typeof value !== "number") {
       throw new TypeError("Height is not a number!");
     }
     if (value <= 0) {

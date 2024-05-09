@@ -1,21 +1,23 @@
-'user strict';
+"user strict";
 
 // Створити функцію getVolume3DFigure, яка приймає будь-яку 3D фігуру і повертає її об'єм.
 
 /**
  * Функція, яка приймає будь-яку 3D фігуру і повертає її об'єм
- * @param {*} figure 
+ * @param {*} figure
  * @throws {TypeError} if param not a instance of Figure3D
  * @returns {number}
  */
-const getVolume3DFigure= (figure) => {
-  if(Figure3D.isFigure3D(figure)) {
+const getVolume3DFigure = (figure) => {
+  if (Figure3D.isFigure3D(figure)) {
     return figure.getValume();
   }
-  throw new TypeError("Param of getVolume3DFigure method is not a instance of Figure3D!");
+  throw new TypeError(
+    "Param of getVolume3DFigure method is not a instance of Figure3D!"
+  );
 };
 
-try{
+try {
   const figure3D = new Figure3D("Figure3D");
   const sphere = new Sphere("Sphere", 10);
   const cube = new Cube("Cube", 5);
@@ -25,6 +27,6 @@ try{
   console.log(getVolume3DFigure(sphere));
   console.log(getVolume3DFigure(cube));
   console.log(getVolume3DFigure(cylinder));
-} catch(error) {
+} catch (error) {
   console.error(error);
 }

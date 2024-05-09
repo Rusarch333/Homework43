@@ -1,4 +1,4 @@
-'user strict';
+"user strict";
 
 /**
  * Клас який реалізує Куб
@@ -10,7 +10,7 @@ class Cube extends Figure3D {
    * @param {string} name
    * @param {number} side
    */
-  constructor (name, side) {
+  constructor(name, side) {
     super(name);
     this.side = side;
   }
@@ -20,7 +20,7 @@ class Cube extends Figure3D {
   }
   set side(value) {
     // ?????????????????????? ЗАВДАВАТИ ВСЕ ТАКИ СЕТ ????
-    if (typeof value !== 'number') {
+    if (typeof value !== "number") {
       throw new TypeError("Side is not a number!");
     }
     if (value <= 0) {

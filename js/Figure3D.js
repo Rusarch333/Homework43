@@ -1,4 +1,4 @@
-'user strict';
+"user strict";
 
 // Створити абстрактний клас Figeure3D з властивостю ім'я (string не пуста) і методом обчислити об'єм.
 /**
@@ -7,7 +7,7 @@
 class Figure3D {
   /**
    * Функція, яка повідомляє, чи є параметр фігурою
-   * @param {*} figure 
+   * @param {*} figure
    * @returns {boolean}
    */
   static isFigure3D(figure) {
@@ -16,9 +16,9 @@ class Figure3D {
 
   /**
    * Конструктор класу Figure3D
-   * @param {string} name 
+   * @param {string} name
    */
-  constructor (name) {
+  constructor(name) {
     // ????????????? _ ??????????
     this.name = name;
   }
@@ -28,7 +28,7 @@ class Figure3D {
   }
   set name(value) {
     // ?????????????????????? ЗАВДАВАТИ ВСЕ ТАКИ СЕТ ????
-    if (typeof value !== 'string') {
+    if (typeof value !== "string") {
       throw new TypeError("Name is not a string!");
     }
     if (value === false) {
@@ -37,8 +37,10 @@ class Figure3D {
     }
     this._name = value;
   }
-  
+
   getValume() {
-    throw new Error("Can't call getValume() method from Figeure3D abstract class!");
+    throw new Error(
+      "Can't call getValume() method from Figeure3D abstract class!"
+    );
   }
 }
