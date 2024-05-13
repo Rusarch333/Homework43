@@ -24,9 +24,8 @@ class Figure3D {
     if (this.constructor === Figure3D) {
       throw new Error("You can`t create instance of abstract class Figure3D!");
     }
-    name = name.trim(); // Позбавляємось зайвих пробілів та рядків типу " ", "  "
     validateStringField("Name", name);
-    this._name = name;
+    this._name = name.trim();
   }
 
   get name() {

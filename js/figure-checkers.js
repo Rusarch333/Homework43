@@ -2,7 +2,7 @@ const validateStringField = (name, string) => {
   if (typeof string !== "string") {
     throw new TypeError(name + " field is not a string!");
   }
-  if (Boolean(string) === false) {
+  if (Boolean(string.trim()) === false) {
     throw new Error(name + " field can't be empty!");
   }
 };
